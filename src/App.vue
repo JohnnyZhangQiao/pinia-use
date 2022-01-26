@@ -3,6 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import PiniaBasicSetup from '@/components/PiniaBasicSetup.vue';
 import PiniaBasicOptions from '@/components/PiniaBasicOptions.vue';
+import StoreGroup from '@/components/StoreGroup.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import PiniaBasicOptions from '@/components/PiniaBasicOptions.vue';
   <div class="main">
     <PiniaBasicSetup />
     <PiniaBasicOptions />
+    <StoreGroup />
   </div>
 </template>
 

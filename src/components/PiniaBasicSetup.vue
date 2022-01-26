@@ -1,11 +1,10 @@
 <script setup lang="ts" name="component-PiniaBasicSetup">
 import { storeToRefs } from 'pinia';
-import { useCounterStoreForSetup } from '@/store/counterForSetup';
+import appStore from '@/store';
 
 // setup composition API模式
-const counterStoreForSetup = useCounterStoreForSetup();
-const { count } = storeToRefs(counterStoreForSetup);
-const { increment, doubleCount } = counterStoreForSetup;
+const { count } = storeToRefs(appStore.useCounterStoreForSetup);
+const { increment, doubleCount } = appStore.useCounterStoreForSetup;
 </script>
 
 <template>
@@ -25,13 +24,13 @@ const { increment, doubleCount } = counterStoreForSetup;
 </template>
 
 <style lang="less" scoped>
-  .box-styl {
-    margin: 10px;
-    .section-box {
-      margin: 20px auto;
-      width: 300px;
-      background-color: #d7ffed;
-      border: 1px solid #000;
-    }
+.box-styl {
+  margin: 10px;
+  .section-box {
+    margin: 20px auto;
+    width: 300px;
+    background-color: #d7ffed;
+    border: 1px solid #000;
   }
+}
 </style>
