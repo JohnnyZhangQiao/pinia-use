@@ -8,12 +8,15 @@ export default {
 
   computed: {
     // 获取state和getters
-    ...mapState(useCounterStoreForOption, ['count1', 'doubleCount']),
+    ...mapState(useCounterStoreForOption, ['count', 'doubleCount'])
   },
 
   methods: {
     // 获取action
-    ...mapActions(useCounterStoreForOption, { increment: 'increment' }),
+    ...mapActions(useCounterStoreForOption, {
+      increment: 'increment',
+      reset: 'reset'
+    })
   }
 };
 </script>
@@ -22,7 +25,7 @@ export default {
   <div class="box-styl">
     <h1>Options模式</h1>
     <p class="section-box">
-      Pinia的state: count1 = <b>{{ this.count1 }}</b>
+      Pinia的state: count = <b>{{ this.count }}</b>
     </p>
     <p class="section-box">
       Pinia的getters: doubleCount() = <b>{{ this.doubleCount }}</b>
@@ -30,6 +33,10 @@ export default {
     <div class="section-box">
       <p>Pinia的action: increment()</p>
       <button @click="this.increment">点我</button>
+    </div>
+    <div class="section-box">
+      <p>Pinia的action: reset()</p>
+      <button @click="this.reset">点我</button>
     </div>
   </div>
 </template>

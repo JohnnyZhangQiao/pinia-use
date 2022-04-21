@@ -3,8 +3,8 @@ import { storeToRefs } from 'pinia';
 import appStore from '@/store';
 
 // setup composition API模式
-const { count } = storeToRefs(appStore.useCounterStoreForSetup);
-const { increment, doubleCount } = appStore.useCounterStoreForSetup;
+const { count, doubleCount } = storeToRefs(appStore.useCounterStoreForSetup);
+const { increment, reset } = appStore.useCounterStoreForSetup;
 </script>
 
 <template>
@@ -14,11 +14,15 @@ const { increment, doubleCount } = appStore.useCounterStoreForSetup;
       Pinia的state: count = <b>{{ count }}</b>
     </p>
     <p class="section-box">
-      Pinia的getters: doubleCount() = <b>{{ doubleCount() }}</b>
+      Pinia的getters: doubleCount() = <b>{{ doubleCount }}</b>
     </p>
     <div class="section-box">
       <p>Pinia的action: increment()</p>
       <button @click="increment">点我</button>
+    </div>
+    <div class="section-box">
+      <p>重置: reset()</p>
+      <button @click="reset">点我</button>
     </div>
   </div>
 </template>

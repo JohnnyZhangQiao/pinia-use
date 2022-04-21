@@ -4,18 +4,18 @@ import { defineStore } from 'pinia';
 export const useCounterStoreForOption = defineStore('counterForOptions', {
   // 定义state
   state: () => {
-    return { count1: 1 };
+    return { count: 1 };
   },
   // 定义action
   actions: {
     increment() {
-      this.count1++;
+      this.count++;
     }
   },
   // 定义getters
   getters: {
     doubleCount(state) {
-      return state.count1 * 2;
+      return state.count * 2;
     }
   }
 });
