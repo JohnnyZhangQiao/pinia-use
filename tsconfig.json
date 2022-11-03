@@ -13,7 +13,14 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["es2017", "esnext", "dom"],
+    "types": ["vite/client", "node"],
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules"]
+
 }

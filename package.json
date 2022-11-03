@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -30,6 +30,6 @@
     "vite": "^2.7.2",
     "vite-plugin-style-import": "^1.4.0",
     "vite-plugin-vue-setup-extend": "^0.3.0",
-    "vue-tsc": "^0.29.8"
+    "vue-tsc": "^1.0.9"
   }
 }
